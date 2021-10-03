@@ -57,6 +57,10 @@ pipeline {
 
     stage('UAT Certification') {
       steps {
+        when() {
+          branch 'master'
+        }
+
         echo 'UAT Certification'
         input 'Please Certify for UAT'
       }
